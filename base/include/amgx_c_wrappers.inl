@@ -643,7 +643,7 @@ inline AMGX_Mode get_mode_from(const Envelope &envl)
     {
         //throws...
         //
-        FatalError("Mode not found.\n", AMGX_ERR_BAD_MODE);
+        //FatalError("Mode not found.\n", AMGX_ERR_BAD_MODE);
     }
 
     AMGX_Mode mode = static_cast<AMGX_Mode>(itFound->second);
