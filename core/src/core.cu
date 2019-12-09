@@ -742,7 +742,7 @@ AMGX_ERROR initialize()
     cudaError_t rc;
     std::stringstream info;
     info << "AMGX version " << __AMGX_BUILD_ID__ << "\n";
-    info << "Built on " << __AMGX_BUILD_DATE__ << ", " << __AMGX_BUILD_TIME__ << "\n";
+    //info << "Built on " << __AMGX_BUILD_DATE__ << ", " << __AMGX_BUILD_TIME__ << "\n";
     int driver_version = 0, runtime_version = 0;
     rc = cudaDriverGetVersion(&driver_version);
 
