@@ -65,19 +65,22 @@ template <class T_Config>
 cusparseStatus_t
 CusparseMatPrec<T_Config>::set(cusparseMatDescr_t &cuMatDescr)
 {
-    return cusparseSetMatFullPrecision(cuMatDescr, true);
+    return CUSPARSE_STATUS_MATRIX_TYPE_NOT_SUPPORTED;
+//    return cusparseSetMatFullPrecision(cuMatDescr, true);
 }
 
 template <AMGX_MemorySpace t_memSpace, AMGX_IndPrecision t_indPrec>
 cusparseStatus_t CusparseMatPrec< TemplateConfig<t_memSpace, AMGX_vecDouble, AMGX_matFloat, t_indPrec> >::set(cusparseMatDescr_t &cuMatDescr)
 {
-    return cusparseSetMatFullPrecision(cuMatDescr, false);
+    return CUSPARSE_STATUS_MATRIX_TYPE_NOT_SUPPORTED;
+//    return cusparseSetMatFullPrecision(cuMatDescr, false);
 }
 
 template <AMGX_MemorySpace t_memSpace, AMGX_IndPrecision t_indPrec>
 cusparseStatus_t CusparseMatPrec< TemplateConfig<t_memSpace, AMGX_vecDoubleComplex, AMGX_matComplex, t_indPrec> >::set(cusparseMatDescr_t &cuMatDescr)
 {
-    return cusparseSetMatFullPrecision(cuMatDescr, false);
+    return CUSPARSE_STATUS_MATRIX_TYPE_NOT_SUPPORTED;
+//    return cusparseSetMatFullPrecision(cuMatDescr, false);
 }
 
 template< class TConfig >
